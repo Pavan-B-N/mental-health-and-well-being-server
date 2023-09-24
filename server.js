@@ -10,7 +10,7 @@ const apiUrl = 'https://api.openai.com/v1/engines/davinci/completions';
 
 dotenv.config()
 
-app.use(cors({ origin: ["http://localhost:3000","https://mental-helath-and-well-being.netlify.app/"] }))
+app.use(cors({ origin: ["http://localhost:3000","https://mental-helath-and-well-being.netlify.app"] }))
 app.use(express.json())
 
 const http = require("http");
@@ -81,7 +81,7 @@ app.post('/chatgpt', async (req, res) => {
 const { Server } = require("socket.io");
 const io = new Server(httpServer, {
     cors: {
-        origin:[ "http://localhost:3000","https://mental-helath-and-well-being.netlify.app/"]
+        origin:[ "http://localhost:3000","https://mental-helath-and-well-being.netlify.app"]
     }
 });
 
