@@ -16,9 +16,9 @@ app.use(express.json())
 const http = require("http");
 const httpServer = http.createServer(app);
 
-const { ExpressPeerServer } = require("peer");
-const peerServer = ExpressPeerServer(httpServer);
-app.use("/peerjs", peerServer);
+// const { ExpressPeerServer } = require("peer");
+// const peerServer = ExpressPeerServer(httpServer);
+// app.use("/peerjs", peerServer);
 
 const chatbotResponses = {
     greeting: 'Hello! How can I assist you today?',
